@@ -1,0 +1,10 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">
+      <i class="fa fa-heart" aria-hidden="true"></i>
+        <span class="badge badge-pill">
+          {{ (likes | async) }}
+        </span>
+    </a>
+  </div>
+</nav>

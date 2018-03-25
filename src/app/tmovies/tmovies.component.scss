@@ -1,0 +1,33 @@
+img {
+    margin: auto;
+    width: auto;
+    max-height:60vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+}
+
+div.centerd {
+    text-align: center;
+}
+
+.operations {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.operations .btn{
+    margin: 0px 10px;
+}
+
+.subheader {
+    font-size: 0.7em;
+}

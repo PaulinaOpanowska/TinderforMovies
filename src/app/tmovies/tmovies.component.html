@@ -1,0 +1,20 @@
+<div class="centerd">
+    <div *ngIf="(movies | async).length > (index | async)" (swipeleft)="swipe()" (swiperight)="swipe()" >
+        <h4>
+            <strong>{{(movies | async)[(index | async)].title}}</strong>
+            <span class="subheader">({{(movies | async)[(index | async)].rating}}/10)</span>
+        </h4>
+        <img [src]='(movies | async)[(index | async)].imageURL' class="img-thumbnail" [alt]="Image">
+    </div>
+
+    <div *ngIf="(movies | async).length <= (index | async)">
+        <p>No more films...</p>
+        <button (click)="reload()" type="button" class="btn"><i class="fa fa-film" aria-hidden="true"></i> RELOAD</button>
+    </div>
+
+    <div *ngIf="(movies | async).length > (index | async)" class="operations">
+        <button (click)="accept()" type="button" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i> Accept</button>
+        <button (click)="reject()" type="button" class="btn btn-danger">Reject <i class="fa fa-times" aria-hidden="true"></i></button>
+    </div>
+</div>
+
